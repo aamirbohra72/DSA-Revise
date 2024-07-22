@@ -14,7 +14,7 @@ int binarySearch(vector<int>& arr, int& s, int& e, int& key) {
 
   if(arr[mid] < key) {
     s = mid+1;
-    int ans =  binarySearch(arr,s,e, key );
+    int ans =  binarySearch(arr,s,e,key );
     return ans;
   }
   else {  

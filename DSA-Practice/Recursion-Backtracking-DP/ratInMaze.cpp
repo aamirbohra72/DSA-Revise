@@ -8,7 +8,7 @@ bool isSafe(int i, int j, int row, int col, int arr[][4],
       (arr[i][j] == 1 ) &&
       (visited[i][j]==false)) {
     return true;
-  }
+  } 
   else {
     return false;
   }
