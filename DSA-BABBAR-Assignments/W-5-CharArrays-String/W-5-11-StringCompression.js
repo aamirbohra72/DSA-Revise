@@ -1,4 +1,4 @@
-// string compression 
+// string compression (run length encoding)
 
 // if(s[i] == prev){
 //     count++;
@@ -28,8 +28,8 @@ class Solution {
                         }
                         reverse(s.begin() + start, s.begin() + index);
                     }
-                    prev = s[i];
-                    count = 1;
+                    prev = s[i];  //update
+                    count = 1;    //reset
                 }
     
     
