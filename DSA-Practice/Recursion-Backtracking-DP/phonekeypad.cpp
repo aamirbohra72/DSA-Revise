@@ -16,7 +16,7 @@ public:
         string value = mapping[digitInteger];
 
         for(int i=0; i<value.length(); i++) {
-            char ch = value[i];
+            char ch = value[i]; 
 
             //include
             //output.push_back(ch);
