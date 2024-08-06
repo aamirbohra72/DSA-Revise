@@ -16,6 +16,7 @@ int solveUsingRecursion(int weight[], int value[], int index, int capacity) {
   //include and exclude
   int include = 0;
   if(weight[index] <= capacity)
+  //yaha fasoge
     include = value[index] + solveUsingRecursion(weight, value, index-1, capacity - weight[index] );
 
   int exclude = 0 + solveUsingRecursion(weight, value, index-1, capacity);
@@ -50,7 +51,7 @@ int solveUsingMem(int weight[], int value[], int index, int capacity, vector<vec
 
 
 int solveUsingTabulation(int weight[], int value[], int n, int capacity) {
-  vector<vector<int> > dp(n, vector<int>(capacity+1 , 0));
+  vector<vector<int> > dp(n, vector<int>(capacity+1 , 0));   //yaha fasoge   
 
   for(int w = weight[0]; w<=capacity; w++) {
     if(weight[0] <= capacity) {
@@ -59,6 +60,8 @@ int solveUsingTabulation(int weight[], int value[], int n, int capacity) {
     else
       dp[0][w] =  0;
   }
+
+  //n ki jagah  index 
 
   for(int index=1; index<n; index++) {
     for(int wt=0; wt<=capacity; wt++) {
@@ -73,7 +76,7 @@ int solveUsingTabulation(int weight[], int value[], int n, int capacity) {
       
     }
   }
-  return dp[n-1][capacity]; 
+  return dp[n-1][capacity];    // n rows ka index n-1 hoga 
 }
 
 int solveUsingSO(int weight[], int value[], int n, int capacity) {
@@ -100,7 +103,7 @@ int solveUsingSO(int weight[], int value[], int n, int capacity) {
     
       curr[wt]= max(include, exclude);
     }
-    //shift
+    //shift   yaha fasoge 
     prev = curr;
   }
   return prev[capacity];  
@@ -147,7 +150,7 @@ int main() {
 
   //int ans = solveUsingRecursion(weight, value, n-1, capacity);
 
-  // vector<vector<int> > dp(n, vector<int>(capacity+1 , -1));
+  // vector<vector<int> > dp(n, vector<int>(capacity+1 , -1));     //yaha fasoge
   // int ans = solveUsingMem(weight, value, n-1, capacity, dp);
 
   int ans = solveUsingSO2(weight, value, n, capacity);
