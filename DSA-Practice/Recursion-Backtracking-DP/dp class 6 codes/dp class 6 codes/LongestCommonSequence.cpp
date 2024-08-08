@@ -1,7 +1,7 @@
 class Solution {
 public:
     int solveUsingRecursion(string a, string b, int i, int j) {
-        if(i == a.length()) {
+        if(i == a.length()) {     //string khatam ho gaya to if any one
             return 0;
         }
         if(j == b.length()) 
