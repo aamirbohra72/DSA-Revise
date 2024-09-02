@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool check(vector<int>& a, vector<int>& b) {
-        if(b[0] <= a[0] && b[1]<=a[1] && b[2] <= a[2])
+        if(b[0] <= a[0] && b[1]<=a[1] && b[2] <= a[2])  //given in problem
             return true;
         else
             return false;
