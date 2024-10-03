@@ -1,7 +1,11 @@
+// 1-d dp paint fence leetcode 276 me nhi he 
+// ways come to paint this fence
+
 #include <iostream>
 #include<vector>
 using namespace std;
-
+//  R,R,R not come  2 se zyada na aaye 
+//  RR, BB, GG  
 
 int solveUsingRecursion(int n, int k) {
   if(n == 1) {
