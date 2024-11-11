@@ -1,3 +1,5 @@
+//find first occurance of a number in a sorted array
+
 #include <iostream>
 #include<vector>
 #include<algorithm>

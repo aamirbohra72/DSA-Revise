@@ -1,3 +1,5 @@
+//find odd occuring element using binary search
+
 #include <iostream>
 #include<vector>
 using namespace std;

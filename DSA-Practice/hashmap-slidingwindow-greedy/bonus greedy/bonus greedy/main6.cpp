@@ -1,3 +1,7 @@
+// chocolate distribution problem
+// sliding window of size m , after sorting an array of n elements
+
+
 #include <iostream>
 #include<vector>
 #include<algorithm>

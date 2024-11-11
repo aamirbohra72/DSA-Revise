@@ -1,3 +1,9 @@
+// defkin spoch
+// row ka max diff and col ka max diff
+// edge case agar border me kuch nhi he to -1 consider karna he 
+// imaginary tower place kardiye so that boundary ban gaye
+
+
 #include <iostream>
 #include<vector>
 #include<algorithm>
@@ -11,6 +17,7 @@ int main() {
   vector<int> rowC;
   vector<int> colC;
 
+//zero index pe tower create kar diya
   rowC.push_back(0);
   colC.push_back(0);
 
@@ -21,7 +28,7 @@ int main() {
     colC.push_back(b);
   }
 
-  //size of 2D grid
+  //size of 2D grid  ending index pe tower create kar diya
   rowC.push_back(x+1);
   colC.push_back(y+1);
 

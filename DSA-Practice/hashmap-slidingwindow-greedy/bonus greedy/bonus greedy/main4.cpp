@@ -1,3 +1,5 @@
+//Huffman encoding u have to do , 3+2= 5, 5+4 = 9, 9+6=15  5+9+15=29 ans  take min and add using priority queue 
+
 #include <iostream>
 #include<vector>
 #include<queue>

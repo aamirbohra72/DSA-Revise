@@ -1,3 +1,5 @@
+//find last occurance of a number in a sorted array
+
 #include <iostream>
 #include<vector>
 using namespace std;

@@ -1,10 +1,15 @@
+// activity selection problem , N meeting in one room
+
+// next arrival time >= prev dept. time
+
+
 #include <iostream>
 #include<vector>
 #include<algorithm>
 using namespace std;
 
 bool cmp(pair<int,int> a, pair<int,int> b) {
-  return a.second < b.second;
+  return a.second < b.second;                    // based on departure time sort in ascending order
 }
 
 int solve(int n, int arr[], int dept[]) {
@@ -17,14 +22,18 @@ int solve(int n, int arr[], int dept[]) {
 
 
   int cnt = 1;
-  cout << data[0].first << ", "<< data[0].second << endl;
+  // cout << data[0].first << ", "<< data[0].second << endl;
+  
   int lastDept = data[0].second;
   for(int i=1; i<n; i++) {
-    if(data[i].first >= lastDept) {
+    if(data[i].first >= lastDept) {      //current wale train ka arrival time greater or equal he purane wale train ke departure time ke
       //current train can be included
       cnt++;
-      lastDept = data[i].second;
-      cout << data[i].first << ", "<< data[i].second << endl;    }
+      lastDept = data[i].second;                 //update
+
+
+      // cout << data[i].first << ", "<< data[i].second << endl; 
+         }   
   }
   return cnt;
 }

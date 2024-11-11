@@ -1,3 +1,6 @@
+// find square root of a number using binary search
+
+
 #include <iostream>
 using namespace std;
 

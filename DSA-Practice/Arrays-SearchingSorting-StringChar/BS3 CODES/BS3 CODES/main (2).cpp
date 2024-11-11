@@ -1,3 +1,6 @@
+//Division of 2 nos using binary search
+
+
 #include <iostream>
 using namespace std;
 

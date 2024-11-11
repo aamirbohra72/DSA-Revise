@@ -1,3 +1,5 @@
+//Apply binary search on 2d array
+
 #include <iostream>
 using namespace std;
 
