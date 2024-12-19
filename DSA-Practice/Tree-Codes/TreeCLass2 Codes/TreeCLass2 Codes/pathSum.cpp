@@ -48,7 +48,7 @@ public:
 
         vector<vector<int> > ans;
         int sum = 0;
-        vector<int> temp;
+        vector<int> temp;   
         solve(root, targetSum, sum, temp, ans);
         return ans;
         

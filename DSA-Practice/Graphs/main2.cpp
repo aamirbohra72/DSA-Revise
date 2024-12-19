@@ -76,13 +76,13 @@ public:
 			int frontNode = q.front();
 			q.pop();
 
-			for(auto nbr: adjList[frontNode]) {
+			for(auto nbr: adjList[frontNode]) {    
 				if(!visited[nbr]) {
 					q.push(nbr);
 					visited[nbr] = true;
 					parent[nbr]=frontNode;
 				}
-				if(visited[nbr] && nbr != parent[frontNode]) {
+				if(visited[nbr] && nbr != parent[frontNode]) {    //nbr visited ho aur parent ke equal na ho 
 						//cycle present
 						return true;
 				}

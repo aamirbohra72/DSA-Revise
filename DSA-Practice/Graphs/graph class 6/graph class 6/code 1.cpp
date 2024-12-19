@@ -42,7 +42,7 @@ private:
     //indegree calculate
     for(auto i: adjList ) {
       int src = i.first;
-      for(auto nbr:i.second) {
+      for(auto nbr: i.second) {
         indegree[nbr]++;
       }
     }

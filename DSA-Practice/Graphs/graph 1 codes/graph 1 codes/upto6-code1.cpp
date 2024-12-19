@@ -32,9 +32,11 @@ public:
     }
   }
 
+  // level order travesal
+
   void bfs(int src, unordered_map<int, bool>& visited) {
     queue<int> q;
-    
+    //q me push karo src node ko aur visited mark kardo
     q.push(src);
     visited[src] = true;
 
@@ -45,6 +47,7 @@ public:
 
       //insert neighbours
       for(auto neighbour: adjList[frontNode]) {
+        //jo neighbour visited nhi he unko queue me push karo aur visited mark kardo
         if(!visited[neighbour] ) {
           q.push(neighbour);
           visited[neighbour] = true;
@@ -53,13 +56,14 @@ public:
     }
   }
 
+// 
   void dfs(int src, unordered_map<int, bool>& visited) {
     cout << src << ", ";
     visited[src] = true;
 
     for(auto neighbour: adjList[src]) {
       if(!visited[neighbour] ) {
-        dfs(neighbour, visited);
+        dfs(neighbour, visited); // dfs ki call mardo
       }
     }
   }

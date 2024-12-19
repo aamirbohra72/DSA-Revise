@@ -77,7 +77,7 @@ public:
                      ansTime = max(ansTime, time+1);
                      q.push({newCoordinates, time + 1});
                      //mark rotten
-                     arr[newX][newY] = 2;
+                     arr[newX][newY] = 2;            // not use double operator
                  }
             }
 

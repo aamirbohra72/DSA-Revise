@@ -66,7 +66,7 @@ class Solution {
 public:
     int numIslands(vector<vector<char>>& grid) {
         
-        map< pair<int,int> , bool > visited;
+        map< pair<int,int>, bool > visited;
         int count = 0;
 
         for(int row=0; row<grid.size(); row++) {

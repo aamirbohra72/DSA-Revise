@@ -32,7 +32,7 @@ private:
       ans.push_back(fNode);
       //or we can do count++
 
-      for(auto nbr: adjList[fNode]) {
+      for(auto nbr: adjList[fNode]) { 
         indegree[nbr]--;
         //check for zero again
         if(indegree[nbr] == 0) {
