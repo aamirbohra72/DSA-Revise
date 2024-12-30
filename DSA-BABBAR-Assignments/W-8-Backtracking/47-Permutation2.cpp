@@ -37,7 +37,7 @@ public:
 
     unordered_map<int, bool>visited;
     for(int i=start; i<nums.size(); i++){
-        if(visited.find(nums[i]) != visited.end()){
+        if(visited.find(nums[i]) != visited.end()){     //last 
             continue;
         }
         visited[nums[i]] = true;
@@ -49,7 +49,7 @@ public:
 
     vector<vector<int>> permuteUnique(vector<int>& nums) {
         vector<vector<int>>ans;
-        permuteUniqueHelper(nums, ans, 0);
+        permuteUniqueHelper(nums, ans, 0);     //start=0
         return ans;
         
     }

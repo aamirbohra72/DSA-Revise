@@ -10,6 +10,7 @@
 
 // Input: s = "aab"
 // Output: "aba"
+
 // Example 2:
 
 // Input: s = "aaab"
