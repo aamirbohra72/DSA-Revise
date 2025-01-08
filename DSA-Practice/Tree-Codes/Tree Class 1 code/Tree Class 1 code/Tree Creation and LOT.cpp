@@ -38,28 +38,28 @@ Node* buildTree() {
 }
 
 void levelOrderTraversal(Node* root ) {
-	queue<Node*> q;
+	queue<Node*> q;                                    //create a queue
 	//initially
-	q.push(root);
-	q.push(NULL);
+	q.push(root);                               //Push root to the queue
+	q.push(NULL);                               //Push NULL to the queue
 
-	while(!q.empty()) {
+	while(!q.empty()) {                     //while queue is not empty
 		//A
-		Node* temp = q.front();
+		Node* temp = q.front();                 //get the first element of the queue
 		//B
-		q.pop();
+		q.pop();                                //pop the first element of the queue
 		
 		if(temp == NULL) {
 			cout << endl;
-			if(!q.empty()) {
+			if(!q.empty()) {               //if there is no more element in the queue then push NULL
 				q.push(NULL);
 			}	
 		}
-		else {
+		else {                                    // if there is an element in the queue then print the data of the element and push the left and right child of the element to the queue
 			//C
 			cout << temp->data << " ";
 			//D
-			if(temp -> left) {
+			if(temp -> left) {                             //
 				q.push(temp ->left);
 			}
 			if(temp ->right) {

@@ -1,3 +1,6 @@
+// pattern simple he only apply for loop
+
+
 class Solution {
 public:
 

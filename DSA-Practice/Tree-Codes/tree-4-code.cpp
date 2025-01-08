@@ -136,10 +136,10 @@ void printTopView(Node* root) {
                 int hd = temp.second;
 
                 //jo bhi horizontal distance aaya h , check if answer for that hd already exists
-                //or not
+                //or not , check entry present in map or not  , level order traversal
 			
-                if(topNode.find(hd) == topNode.end()) {
-                        //crete entry
+                if(topNode.find(hd) == topNode.end()) {          //mapping.find(-1) == mapping.end()  means hd not present in map
+                        //crete entry                            //mapping.find(-1) != mapping.end()  means hd present in map
                         topNode[hd] = frontNode->data;
                 }
 
@@ -178,7 +178,7 @@ void printBottomView(Node* root) {
                 Node* frontNode = temp.first;
                 int hd = temp.second;
 
-                //crete entry
+                //crete entry                      //remove condition from here similar solution as top view
                 topNode[hd] = frontNode->data;
 
 

@@ -22,12 +22,6 @@
 // 1 ≤ arr[i] ≤ 104
 
 
-//{ Driver Code Starts
-// #include <bits/stdc++.h>
-// using namespace std;
-
-
-// } Driver Code Ends
 class Solution {
   public:
      long mergeSort(vector<int>&arr, vector<int>&temp, int start , int end){
@@ -41,7 +35,7 @@ class Solution {
      }
      
      long merge(vector<int>&arr, vector<int>&temp, int start, int mid, int end){
-         int i = start, j = mid + 1, k =start;
+         int i = start, j = mid + 1, k = start;
          long c = 0;
          while(i<=mid && j<=end){
              if(arr[i] <= arr[j]){
@@ -76,29 +70,3 @@ class Solution {
         return c;
     }
 };
-
-//{ Driver Code Starts.
-
-// int main() {
-
-//     int T;
-//     cin >> T;
-//     cin.ignore();
-//     while (T--) {
-//         int n;
-//         vector<int> a;
-//         string input;
-//         getline(cin, input);
-//         stringstream ss(input);
-//         int num;
-//         while (ss >> num)
-//             a.push_back(num);
-//         Solution obj;
-//         cout << obj.inversionCount(a) << endl;
-//         cout << "~" << endl;
-//     }
-
-//     return 0;
-// }
-
-// } Driver Code Ends

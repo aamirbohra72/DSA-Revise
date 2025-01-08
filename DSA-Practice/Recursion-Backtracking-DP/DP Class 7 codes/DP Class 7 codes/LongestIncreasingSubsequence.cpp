@@ -8,10 +8,10 @@ public:
         //include
         int include = 0;
         if(prev == -1 || arr[curr] > arr[prev])
-            include = 1 + solveUsingRecursion(arr, curr+1, curr);
+            include = 1 + solveUsingRecursion(arr, curr+1, curr);            // prev=curr become
 
         //excude
-        int exclude = 0 + solveUsingRecursion(arr, curr+1, prev);
+        int exclude = 0 + solveUsingRecursion(arr, curr+1, prev);           // prev as it is
 
         int ans = max(include, exclude);
         return ans;
@@ -51,14 +51,14 @@ public:
                     include = 1 + dp[curr+1][curr + 1];
 
                 //excude
-                int exclude = 0 + dp[curr+1][prev + 1];
+                int exclude = 0 + dp[curr+1][prev + 1];                     //balance by doing prev+1 and curr+1
 
                 dp[curr][prev + 1] = max(include, exclude);   
             }
         }
-        return dp[0][0];
+        return dp[0][0];                                     // dp[0][-1+1]
     }
-    
+    // --------------------------------------------binary search approach------------------------------
     int solveOptimal(vector<int>& arr) {
         if(arr.size() == 0)
             return 0;

@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool check(vector<int>& a, vector<int>& b) {
+    bool check(vector<int>& a, vector<int>& b) {           //any dimension can consider length, width, height as base
         if(b[0] <= a[0] && b[1]<=a[1] && b[2] <= a[2])  //given in problem
             return true;
         else
@@ -16,8 +16,8 @@ public:
             for(int prev = curr - 1; prev >= -1; prev--) {
                 //include
                 int include = 0;
-                if(prev == -1 || check(arr[curr], arr[prev]))
-                    include = arr[curr][2] + nextRow[curr + 1];
+                if(prev == -1 || check(arr[curr], arr[prev]))              //check curr and prev
+                    include = arr[curr][2] + nextRow[curr + 1];             //arr[curr][2] curr ki height ko include karliya //length not find prev ke upar curr ko rakhna he
 
                 //excude
                 int exclude = 0 + nextRow[prev + 1];
