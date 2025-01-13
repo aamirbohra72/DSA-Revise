@@ -120,8 +120,8 @@ Node* findNodeInBST(Node* root, int target) {
 	if(root->data == target) 
 		return root;
 //assuming there are only unique values in tree
-	// Node* leftAns = false;
-	// Node* rightAns = false;
+	// bool leftAns = false;
+	// bool rightAns = false;
 	
 	if(target > root->data) {
 		//right subtree me search karo
