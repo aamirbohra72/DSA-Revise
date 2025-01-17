@@ -23,11 +23,11 @@ void print(Node* head) {
 Node* reverse(Node* head) {
         Node* prev = NULL;
         Node* curr = head;
-        Node* next = curr -> next;
+        Node* next = curr -> next;            //add pointer to next node
         while(curr != NULL) {
-                next = curr -> next;
+                next = curr -> next;          //save next node so that track not lose
                 curr -> next = prev;
-                prev = curr;
+                prev = curr;                   //aage le jao
                 curr = next;
         }
         return prev;
