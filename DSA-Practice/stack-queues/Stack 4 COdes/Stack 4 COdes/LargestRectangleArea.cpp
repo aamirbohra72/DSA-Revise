@@ -34,7 +34,7 @@ vector<int> nextSmaller(vector<int> &input) {
 
           //apka answer stack me 
           while(s.top() != -1 && input[s.top()] >= curr) {
-                  s.pop();
+                  s.pop();                                            //bade element ko stack se out kardo
           }
 
           //chotta element mil chuka h -> ans store
@@ -59,7 +59,7 @@ vector<int> nextSmaller(vector<int> &input) {
                 int length = heights[i];
                 
                 if(next[i] == -1) {
-                        next[i] = size;
+                        next[i] = size;                   //-1 replace with size = 6
                 }
 
                 int width = next[i] - prev[i] - 1;

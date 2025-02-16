@@ -8,7 +8,7 @@ public:
         //process first k size window 
         for(int i=0; i<k; i++) {
 
-            while(!dq.empty() &&  nums[dq.back()] < nums[i])
+            while(!dq.empty() &&  nums[dq.back()] < nums[i])      // right most element in dq is smaller than current element
                 dq.pop_back();
             //insert element
             dq.push_back(i);
