@@ -1,3 +1,9 @@
+// stable or Unstable Algorithm
+// stable = order preserved
+
+// iTh element ko pakad ke uski sahi position me daal do 
+
+
 #include <iostream>
 #include<vector>
 using namespace std;

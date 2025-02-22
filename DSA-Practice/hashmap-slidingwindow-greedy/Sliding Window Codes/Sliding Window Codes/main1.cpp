@@ -20,10 +20,10 @@ public:
         //remaining windows
         for(int i=k; i<nums.size(); i++) {
             //removal
-            if(!dq.empty() && i-k >= dq.front()) 
+            if(!dq.empty() && i-k >= dq.front())            //yahi game he aage wala element remove kardo
                 dq.pop_front();
 
-            //additional
+            //additional insertion of next element
             while(!dq.empty() &&  nums[dq.back()] < nums[i])
                 dq.pop_back();
             //insert element

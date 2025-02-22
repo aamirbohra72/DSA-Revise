@@ -32,12 +32,12 @@
 class Solution {
 public:
     string removeOccurrences(string s, string part) {
-        int pos = s.find(part);
+        int pos = s.find(part);            //find the starting index of part in s
 
         // if part is not found in s, return s, npos = no position 
         while(pos != string::npos) {
-            s.erase(pos, part.length());
-            // update the position of the next occurence
+            s.erase(pos, part.length());         //pos shows starting index of part, part.length() shows length of part erase it from s
+            // update the position of the next occurence (looping variable pos)
             pos = s.find(part);       
         }
         return s;

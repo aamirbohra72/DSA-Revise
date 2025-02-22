@@ -47,9 +47,9 @@ public:
 
         //something missing - THIS IS THE GAME       //circular nature of array timePoints
         int lastDiff1 = (minutes[0] + 1440) - minutes[n-1];
-        int lastDiff2 = minutes[n-1] - minutes[0];
-        int lastDiff = min(lastDiff1, lastDiff2);
-        mini = min(mini, lastDiff);
+        // int lastDiff2 = minutes[n-1] - minutes[0];
+        // int lastDiff = min(lastDiff1, lastDiff2);
+        mini = min(mini, lastDiff1);
 
         return mini;
 

@@ -25,7 +25,7 @@
 // 1 <= s.length <= 1000
 // s consists of lowercase English letters.
 
-
+// Tc = o(n*n/2) = 0(n2)
 
 
 class Solution {
